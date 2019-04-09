@@ -137,11 +137,9 @@ export class HeihachiroDetector {
         notify: {
           channel: false
         }
-      }, (error) => {
-        if (error) {
-          // エラーになってもとりあえず処理を続ける
-          Log.w('Error occurred notifySlack: ', error);
-        }
+      }, (e) => {
+        // エラーになってもとりあえず処理を続ける
+        Log.w('Error occurred notifySlack: ', e);
         resolve(null);
       });
     });
